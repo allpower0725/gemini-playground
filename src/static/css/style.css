@@ -87,7 +87,7 @@ body {
     margin-right: 10px;
 }
 
-#send-button, #mic-button {
+#send-button {
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -99,16 +99,16 @@ body {
     overflow: hidden;
 }
 
-#send-button:hover, #mic-button:hover {
+#send-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#send-button:active, #mic-button:active {
+#send-button:active{
     transform: translateY(1px);
 }
 
-#send-button::after, #mic-button::after {
+#send-button::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -121,7 +121,7 @@ body {
     transition: width 0.3s ease, height 0.3s ease;
 }
 
-#send-button:active::after, #mic-button:active::after {
+#send-button:active::after {
     width: 200px;
     height: 200px;
 }
@@ -214,6 +214,50 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+#mic-button {
+    background: #4285f4;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#mic-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#mic-button:active {
+    transform: translateY(1px);
+}
+
+#mic-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+#mic-button:active::after {
+    width: 200px;
+    height: 200px;
+}
+
+#mic-button.active {
+    background: #ea4335;
 }
 
 #camera-button {
